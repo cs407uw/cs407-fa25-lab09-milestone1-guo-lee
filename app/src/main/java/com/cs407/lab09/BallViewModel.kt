@@ -56,10 +56,10 @@ class BallViewModel : ViewModel() {
                 // Hint: The sensor's x and y-axis are inverted
                 // currentBall.updatePositionAndVelocity(xAcc = ..., yAcc = ..., dT = ...)
 
-                val sensitivity = 12f
+                val sensitivity = 15f
 
                 val xAcc = -event.values[0] * sensitivity
-                val yAcc = -event.values[1] * sensitivity
+                val yAcc = event.values[1] * sensitivity
 
                 currentBall.updatePositionAndVelocity(
                     xAcc = xAcc,
